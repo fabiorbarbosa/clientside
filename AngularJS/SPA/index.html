@@ -1,10 +1,11 @@
 <html>
 	<head>
 		<title>SAP em AngularJs</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-resource.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.min.js"></script>
@@ -15,9 +16,18 @@
         <script src="js/configRouter.js"></script>
 	</head>
 	<body ng-app="spaCorreios">
-        <div class="page-header">
-            <h1>Busca de CEP/Logradouro com AngularJS</h1>
+        <div class="container divGeral">
+            <div class="page-header divGeral">
+                <h1>Busca de CEP/Logradouro com AngularJS</h1>                 
+            </div>
+            <br />
+            <div class="divGeral">
+                <ul class="nav nav-tabs">
+                    <li role="presentation"><a href="#/BuscaCEP">Buscar CEP</a></li>
+                    <li role="presentation"><a href="#/BuscaLogradouro">Buscar Logradouro</a></li>
+                </ul>
+            </div>
+            <div class="divGeral" ng-view></div>
         </div>
-        <div ng-view></div>
 	</body>
 </html>

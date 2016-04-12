@@ -8,6 +8,6 @@ app.config(['$routeProvider', function ($routeProvider) {
         templateUrl : 'templates/BuscaCEP.html',
         controller : 'cepController'
     }).otherwise({
-       redirectTo : '/BuscaLogradouro' 
+       redirectTo : '/BuscaCEP' 
     });
 }])
