@@ -1,0 +1,49 @@
+        <div ng-controller="cepController" class="panel panel-primary">
+            <div class="panel-heading">Pesquisa de CEP</div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-lg-4">
+                        <label for="cep">UF</label>
+                        <select ng-model="inputUF" class="form-control">
+                            <option ng-repeat="itemUF in UF" value="{{itemUF}}">{{itemUF}}</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-4">
+                        <label for="cep">Cidade</label>
+                        <input type="text" required ng-model="inputCidade" class="form-control">
+                    </div>
+                    <div class="col-lg-4">
+                        <label for="cep">Logradouro</label>
+                        <div class="input-group">
+                            <input type="text" required ng-model="inputLogradouro" class="form-control">
+                            <span class="input-group-btn">
+                                <button ng-click="ConsultarCEP()" class="btn btn-default">Consultar</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <table id="gridResult" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>CEP</th>
+                            <th>Bairro</th>
+                            <th>Complemento</th>
+                            <th>Localidade</th>
+                            <th>Logradouro</th>
+                            <th>UF</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="itemCEP in dadosCEP">
+                            <td>{{itemCEP.cep}}</td>
+                            <td>{{itemCEP.bairro}}</td>
+                            <td>{{itemCEP.complemento}}</td>
+                            <td>{{itemCEP.localidade}}</td>
+                            <td>{{itemCEP.logradouro}}</td>
+                            <td>{{itemCEP.uf}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>

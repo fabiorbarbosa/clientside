@@ -1,0 +1,37 @@
+        <div ng-controller="logradouroController" class="panel panel-primary">
+            <div class="panel-heading">Pesquisa de Logradouro</div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="cep">CEP</label>
+                    <div class="input-group">
+                        <input type="text" ng-model="inputCep" placeholder="00000-000" class="form-control">
+                        <span class="input-group-btn">
+                            <button ng-click="ConsultarLogradouro()" class="btn btn-default">Consultar</button>
+                        </span>
+                    </div>
+                </div>
+                <table id="gridResult" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>CEP</th>
+                            <th>Bairro</th>
+                            <th>Complemento</th>
+                            <th>Localidade</th>
+                            <th>Logradouro</th>
+                            <th>UF</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{dadosLogradouro.cep}}</td>
+                            <td>{{dadosLogradouro.bairro}}</td>
+                            <td>{{dadosLogradouro.complemento}}</td>
+                            <td>{{dadosLogradouro.localidade}}</td>
+                            <td>{{dadosLogradouro.logradouro}}</td>
+                            <td>{{dadosLogradouro.uf}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
