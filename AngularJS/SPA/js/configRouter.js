@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use strict'
 
 app.config(['$routeProvider', function ($routeProvider) {
@@ -10,4 +11,18 @@ app.config(['$routeProvider', function ($routeProvider) {
     }).otherwise({
        redirectTo : '/BuscaCEP' 
     });
+=======
+'use strict'
+
+app.config(['$routeProvider', function ($routeProvider) {
+    $routeProvider.when('/BuscaLogradouro', {
+        templateUrl : 'templates/BuscaLogradouro.html',
+        controller : 'logradouroController'
+    }).when('/BuscaCEP', {
+        templateUrl : 'templates/BuscaCEP.html',
+        controller : 'cepController'
+    }).otherwise({
+       redirectTo : '/BuscaCEP' 
+    });
+>>>>>>> origin/master
 }])
